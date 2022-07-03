@@ -1,0 +1,155 @@
+#row {
+  display: flex;
+  margin: 2px;
+  height: 60px;
+  width: 60px;
+  flex-wrap: nowrap;
+  background-color: #555;
+  border: black solid;
+  border-radius: 10%;
+  justify-content: center;
+  vertical-align: middle;
+  font-size: 2.3em;
+  color: rgb(211, 211, 211);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.letter {
+  margin: 0px 3px 0px 3px;
+  text-align: center;
+  padding: 0;
+  height: 58px;
+  width: 38px;
+}
+.letter:hover {
+  background-color: black;
+  color: gray;
+  transition: 0.6s;
+}
+#firstrow {
+  text-align: center;
+  margin: 0px auto 4px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+#secondrow {
+  justify-content: center;
+  margin: 0 auto 4px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+#thirdrow {
+  justify-content: center;
+  margin: 0 auto 4px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+#keyboard {
+  bottom: 0;
+  margin-top: 20px;
+  margin-bottom: 1px;
+}
+/* #main{
+    justify-content: center;
+} */
+#backspace {
+  width: 52.2px;
+  height: 58px;
+  color: white;
+}
+#enter {
+  width: 75px;
+  height: 58px;
+  margin-right: 5px;
+}
+/* #box{
+    /* display:grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 5px;
+    padding: 10px;
+    box-sizing: border-box; */
+/* } */
+#containbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  overflow: hidden;
+}
+#body {
+  background-color: #121212;
+}
+@media (min-height: 641px) {
+  #keyboard {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    right: 5%;
+  }
+}
+#header {
+  display: flex;
+  justify-content: center;
+  border-bottom-color: #555;
+  border-bottom-style: solid;
+}
+#h1 {
+  font-size: 40px;
+  color: azure;
+  font-family: "Oswald", sans-serif;
+}
+#warning {
+  background-color: azure;
+  color: #121212;
+  font-family: "Slabo 27px", serif;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 1rem;
+  pointer-events: none;
+  width: fit-content;
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}

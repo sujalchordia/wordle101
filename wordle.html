@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+    </link>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Oswald:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="wordle.css">
+    <link rel="icon" type="image/png" href="C:\Code\webdevlopement\wordle\w.png" sizes="128x128" />
+    <title>Wordle 101</title>
+</head>
+<body id="body" >
+    <div id="header">
+        <div id ="h1">WORDLE 101</div>
+    </div>
+    <div id ="warning">
+    </div>
+    <div id="main" class="container-sm">
+        <div id="containbox">
+        <div id="box" >
+            <div  class="row">
+                <div  id="row" class="col-auto"></div>
+                <div id="row"  class="col-auto"></div>
+                <div id="row" class="col-auto"></div>
+                <div id="row" class="col-auto"></div>
+                <div id="row" class="col-auto"></div>
+            </div>
+            <div   class="row">
+                <div id="row" class="col-auto"></div>
+                <div id="row"  class="col-auto"></div>
+                <div id="row" class="col-auto"></div>
+                <div id="row" class="col-auto"></div>
+                <div id="row" class="col-auto"></div>
+            </div>
+            <div   class="row">
+                <div id="row" class="col-auto"></div>
+                <div id="row"  class="col-auto"></div>
+                <div id="row" class="col-auto"></div>
+                <div id="row" class="col-auto"></div>
+                <div id="row" class="col-auto"></div>
+            </div>
+            <div  class="row">
+                <div id="row" class="col-auto"></div>
+                <div id="row"  class="col-auto"></div>
+                <div id="row" class="col-auto"></div>
+                <div id="row" class="col-auto"></div>
+                <div id="row" class="col-auto"></div>
+            </div>
+            <div   class="row">
+                <div id="row" class="col-auto"></div>
+                <div id="row"  class="col-auto"></div>
+                <div id="row" class="col-auto"></div>
+                <div id="row" class="col-auto"></div>
+                <div id="row" class="col-auto"></div>
+            </div>
+            <div  class="row" >
+                <div  id="row" class="col-auto"></div>
+                <div id="row"  class="col-auto"></div>
+                <div id="row" class="col-auto"></div>
+                <div id="row" class="col-auto"></div>
+                <div id="row" class="col-auto"></div>
+            </div>
+        </div>
+        </div>
+        <div id="containkeyboard">
+            <div id="keyboard"  >
+                <div id="firstrow">
+                    <button type="button" value="Q" id="letter"  class="letter btn btn-dark">Q</button>
+                    <button type="button" value="W"id="letter"  class="letter btn btn-dark">W</button>
+                    <button type="button" value="E"id="letter"  class="letter btn btn-dark">E</button>
+                    <button type="button" value="R"id="letter"  class="letter btn btn-dark">R</button>
+                    <button type="button" value="T"id="letter"  class="letter btn btn-dark">T</button>
+                    <button type="button" value="Y"id="letter"  class="letter btn btn-dark">Y</button>
+                    <button type="button" value="U"id="letter"  class="letter btn btn-dark">U</button>
+                    <button type="button" value="I"id="letter"  class="letter btn btn-dark">I</button>
+                    <button type="button" value="O"id="letter"  class="letter btn btn-dark">O</button>
+                    <button type="button" value="P"id="letter"  class="letter btn btn-dark">P</button>
+                </div>
+                <div id="secondrow">
+                    <button type="button" value="A" id="letter"  class="letter btn btn-dark">A</button>
+                    <button type="button" value="S" id="letter"  class="letter btn btn-dark">S</button>
+                    <button type="button" value="D" id="letter"  class="letter btn btn-dark">D</button>
+                    <button type="button" value="F" id="letter"  class="letter btn btn-dark">F</button>
+                    <button type="button" value="G" id="letter"  class="letter btn btn-dark">G</button>
+                    <button type="button" value="H" id="letter"  class="letter btn btn-dark">H</button>
+                    <button type="button" value="J" id="letter"  class="letter btn btn-dark">J</button>
+                    <button type="button" value="K" id="letter"  class="letter btn btn-dark">K</button>
+                    <button type="button" value="L" id="letter"  class="letter btn btn-dark">L</button>
+                </div>
+                <div id="thirdrow">
+                    <button type="button"  id="enter"  class=" btn btn-dark">ENTER</button>
+                    <button type="button" value="Z" id="letter"  class="letter btn btn-dark">Z</button>
+                    <button type="button" value="X" id="letter"  class="letter btn btn-dark">X</button>
+                    <button type="button" value="C" id="letter"  class="letter btn btn-dark">C</button>
+                    <button type="button" value="V" id="letter"  class="letter btn btn-dark">V</button>
+                    <button type="button" value="B" id="letter"  class="letter btn btn-dark">B</button>
+                    <button type="button" value="N" id="letter"  class="letter btn btn-dark">N</button>
+                    <button type="button" value="M" id="letter"  class="letter btn btn-dark">M</button>
+                    <button type="button" id="backspace"  class=" btn btn-dark"><i class='fas fa-backspace '></i></button>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script src="wordle.js"></script>
+    
+</body>
+</html>
