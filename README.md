@@ -1,2 +1,2 @@
 # wordle101
-A front-end based re-creating of the wordle game using HTML, CSS and JavaScript only!
+A front-end based re-creation of the wordle game using HTML, CSS and JavaScript only!
