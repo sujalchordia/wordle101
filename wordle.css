@@ -116,6 +116,7 @@
   width: fit-content;
   border-radius: 10px;
   visibility: hidden;
+  z-index: 9;
 }
 
 @keyframes shake {
