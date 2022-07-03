@@ -9276,34 +9276,57 @@ document.querySelector("#enter").addEventListener("click", () => {
       letters[idi].style.backgroundColor = "rgb(58,58,60)";
     }
     flag = 0;
-    let filteredStrings = { search: display, select: result };
-    let resultstring = (
-      filteredStrings.select.match(
-        new RegExp("[" + filteredStrings.search + "]", "g")
-      ) || []
-    ).join("");
-    for (let i = 0; i < result.length; i++) {
-      for (let j = 0; j < resultstring.length; j++) {
-        if (display[i] == resultstring[j]) {
-          wordArr[row][i].style.backgroundColor = "rgb(255,255,102)";
-          wordArr[row][i].style.color = "black";
-          idi = idgenerator(display, i);
-          letters[idi].style.backgroundColor = "rgb(255,255,102)";
-          letters[idi].style.color = "black";
-          resultstring = resultstring.slice(0, j) + resultstring.slice(j + 1);
-        }
-      }
-    }
+    let greenIndexList = [];
     for (let i = 0; i < 5; i++) {
-      // if()
       if (display[i] == result[i]) {
         wordArr[row][i].style.backgroundColor = "rgb(83,141,78)";
         idi = idgenerator(display, i);
         letters[idi].style.backgroundColor = "rgb(83,141,78)";
         letters[idi].style.color = "black";
         wordArr[row][i].style.color = "black";
+        greenIndexList.push(i);
       }
     }
+
+    let d_array = [];
+    let r_array = [];
+
+    for(let i=0; i<5; i++){
+      if(greenIndexList.indexOf(i) != -1){
+          d_array.push('0');
+          r_array.push('1');
+      }
+      else{
+          d_array.push(display[i]);
+          r_array.push(result[i]);
+      }
+    }
+
+    let d_copy = d_array.join('');
+    let r_copy = r_array.join('');
+    let filteredStrings = { search: d_copy, select: r_copy };
+    let resultstring = (
+      filteredStrings.select.match(
+        new RegExp("[" + filteredStrings.search + "]", "g")
+      ) || []
+    ).join("");
+    for (let i = 0; i < r_copy.length; i++) {
+      for (let j = 0; j < resultstring.length; j++) {
+        if (d_copy[i] == resultstring[j]) {
+          wordArr[row][i].style.backgroundColor = "rgb(255,255,102)";
+          wordArr[row][i].style.color = "black";
+          idi = idgenerator(d_copy, i);
+          if(letters[idi].style.backgroundColor!="rgb(83,141,78)"){
+          letters[idi].style.backgroundColor = "rgb(255,255,102)";
+          letters[idi].style.color = "black";
+          }
+          else{
+          }
+          resultstring = resultstring.slice(0, j) + resultstring.slice(j + 1);
+        }
+      }
+    }
+
     if (display == result) {
       box.style.animation = "shake 0.4s ";
       warnings.innerHTML = "YOU WON!";
